@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Orbitron:wght@400..900&display=swap');
+
+body{
+    background:
+        radial-gradient(circle at 15% 10%,
+            rgba(255,185,90,.18) 0%,
+            transparent 28%),
+
+        radial-gradient(circle at 85% 20%,
+            rgba(70,120,255,.12) 0%,
+            transparent 30%),
+
+        radial-gradient(circle at 50% 80%,
+            rgba(180,40,30,.12) 0%,
+            transparent 35%),
+
+        radial-gradient(circle at 10% 90%,
+            rgba(40,140,90,.10) 0%,
+            transparent 30%),
+
+        radial-gradient(circle at center,
+            transparent 45%,
+            rgba(0,0,0,.35) 100%),
+
+        linear-gradient(
+            180deg,
+            #2a211d 0%,
+            #181311 40%,
+            #0f0d0d 100%
+        );
+
+    color: #f5ecd8;
+}
+
+* {
+    font-family: "MedievalSharp", cursive, sans-serif;
+}
+
+.header {
+    display: flex;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo > img {
+    width: 8vw;
+    height: auto;
+    margin-right: 1vw;
+}
+
+.header__house {
+    display: flex;
+    margin: 2.5vw 0 0 25vw;
+}
+
+.teoria {
+    width: 37.8vw;
+}
+
+main > .bloque:nth-of-type(1) {
+    margin-top: 5vh;
+}
+
+main > .bloque:nth-of-type(2) {
+    margin-top: 120vh;
+    display: flex;
+}
+
+main > .bloque:nth-of-type(3) {
+    margin-top: 15vh;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 17.5vw;
+    align-items: start;
+}
+
+/* Tarjeta POSITION */
+
+.position-card {
+    position: absolute;
+    right: 0;
+    top: 20vh;
+    right: 12vw;
+    width: 20vw;
+}
+
+h2, h4, p {
+    margin: 1.5vh 0;
+}
+
+.stats{
+    display: grid;
+    grid-template-columns: auto auto;
+
+    border: 3px dotted #f5ecd8;
+    border-radius: .5vw;
+
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.stats div {
+    display: inline-block;
+    width: 3vw;
+}
+
+.badge {
+    font-weight: bold;
+    font-style: italic;
+    display: block;
+    margin-bottom: 1.5vh;
+}
+
+.position-card img {
+    width: 20vw;
+    border: 3px dashed #f5ecd8;
+}
+
+/* Tarjeta FLEXBOX */
+
+.flex-card {
+    display: flex;
+    width: 38vw;
+    justify-content: flex-end;
+    margin: 5vh 0 10vw 18vw;
+}
+
+.flex-card img {
+     width: 15vw;
+     margin-right: 1vw;
+     border: 3px dashed #f5ecd8;
+}
+
+/*Tarjeta GRID*/
+
+.grid-card {
+    display: grid;
+    grid-template-columns: 15vw 10vw 15vw;
+
+    grid-template-areas:
+        "titulo titulo titulo"
+        "grid-img      descripcion      estadisticas"
+        "habilidades-grid      info      info";
+    
+    gap: 1.5vw;
+}
+
+.titulo { grid-area: titulo; text-align: center}
+.grid-card img { grid-area: grid-img}
+.descripcion { grid-area: descripcion;}
+.estadisticas { grid-area: estadisticas; }
+.habilidades-grid { grid-area: habilidades-grid;}
+.info { grid-area: info; }
+
+.grid-card img {
+    width: 15vw;
+    border: 3px dashed #f5ecd8; 
+}
+
+/* Efectos VISUALES */
+
+.position-card:hover img,
+.flex-card:hover img,
+.grid-card:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffdb8e;
+}
