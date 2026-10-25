@@ -62,10 +62,16 @@ body{
 
 main > .bloque:nth-of-type(1) {
     margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3vw;
+    padding-right: 12vw;
+    box-sizing: border-box;
 }
 
 main > .bloque:nth-of-type(2) {
-    margin-top: 120vh;
+    margin-top: 6vh;
     display: flex;
 }
 
@@ -80,10 +86,7 @@ main > .bloque:nth-of-type(3) {
 /* Tarjeta POSITION */
 
 .position-card {
-    position: absolute;
-    right: 0;
-    top: 20vh;
-    right: 12vw;
+    position: relative;
     width: 20vw;
 }
 
@@ -91,16 +94,27 @@ h2, h4, p {
     margin: 1.5vh 0;
 }
 
-.stats{
-    display: grid;
-    grid-template-columns: auto auto;
-
+.stats {
     border: 3px dotted #f5ecd8;
     border-radius: .5vw;
+    text-align: center;
+}
 
+/* Estadísticas de la tarjeta POSITION */
+.position-card .stats {
+    display: grid;
+    grid-template-columns: auto auto;
     justify-items: center;
     align-items: center;
-    text-align: center;
+}
+
+/* Estadísticas de la tarjeta FLEXBOX */
+.flex-card .stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .stats div {
@@ -108,15 +122,37 @@ h2, h4, p {
     width: 3vw;
 }
 
-.badge {
+.flex-card .stats div {
+    display: flex;
+    flex: 1 1 3rem;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    min-width: 0;
+}
+
+.position-card .badge {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 2;
+
+    display: inline-block;
+    margin: 0;
+    padding: 0.5rem 0.75rem;
+
     font-weight: bold;
     font-style: italic;
-    display: block;
-    margin-bottom: 1.5vh;
+    color: #ffdb8e;
+    background: rgba(15, 13, 13, 0.92);
+    border: 1px solid #ffdb8e;
+    border-radius: 0.5rem;
 }
 
 .position-card img {
-    width: 20vw;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
     border: 3px dashed #f5ecd8;
 }
 
@@ -125,14 +161,30 @@ h2, h4, p {
 .flex-card {
     display: flex;
     width: 38vw;
-    justify-content: flex-end;
-    margin: 5vh 0 10vw 18vw;
+
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.5vw;
+
+    margin: 7vh 0 0vw 18vw;
+    box-sizing: border-box;
 }
 
 .flex-card img {
-     width: 15vw;
-     margin-right: 1vw;
-     border: 3px dashed #f5ecd8;
+    flex: 0 1 15vw;
+    width: 15vw;
+    max-width: 40%;
+    min-width: 0;
+
+    margin-right: 0;
+    box-sizing: border-box;
+    border: 3px dashed #f5ecd8;
+}
+
+.flex-card .contenido {
+    flex: 1 1 0;
+    min-width: 0;
 }
 
 /*Tarjeta GRID*/
